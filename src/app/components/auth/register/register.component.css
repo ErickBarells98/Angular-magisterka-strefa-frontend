@@ -1,0 +1,33 @@
+.form-container-register{
+    width: 500px;
+}
+
+.form-container-register .form-row{
+    width: 100%;
+}
+
+.form-container-register .form-input{
+    width: 55%;
+}   
+
+.form-container-register label{
+    width: 35%;
+    padding-right: 25px;
+}
+
+.row--custom{
+    display: flex;
+    margin-bottom: 15px;
+}
+.row--custom label{
+    width: 35%;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: right;
+    padding-top: 5px;
+}
+
+.row--custom select{
+    width: 55% !important;
+    margin-left: 0;
+}

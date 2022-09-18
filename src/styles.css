@@ -1,1 +1,552 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Helvetica', sans-serif !important;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+/* List container CSS */
+
+.nav-tabs--custom.coursesTab li button{
+  color:#000 !important;
+  font-size: 14px;
+}
+
+.courses-tabs .nav-tabs{
+ border-bottom: 2px solid rgb(87, 87, 87) !important;
+}
+
+.ul-custom-list{
+ padding-left: 9px;
+}
+
+.ul-custom-list li{
+ padding-bottom: 5px;
+}
+
+.ul-custom-list li a{
+ cursor: pointer;
+ font-size: 13px;
+ color: green
+}
+
+.hr-list{
+ margin: 10;
+ border-top: 3px solid rgb(167, 166, 166);
+ margin-inline: 0;
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+
+.nav-tabs--custom li button{
+ padding: 5px;
+ color: black !important;
+ font-size: 12px;
+ font-weight: 100;
+}
+
+.nav-tabs li button{
+ color: #2d8321 !important;
+}
+
+.nav-tabs li button.active{
+ color: rgb(92, 92, 92) !important;
+}
+
+.nav-tabs--custom li button.active{
+ background-color: rgb(96,96,96) !important;
+ color: white !important;
+}
+
+.container-list{
+ width: 50%;
+ margin-left: 3px;
+}
+
+.content-container{
+ width: 500px;
+ margin-left: 70px; 
+}
+
+.file-display-row{
+ margin-left: 30px;
+ list-style: inside;
+}
+
+.file-display-container{
+ margin-bottom: 15px;
+ font-size: 14px;
+}
+
+
+/* Navbar CSS */
+
+.custom-navbar{
+  width: 100%;
+  background-color: #222222;
+  height: 50px;
+}
+
+.custom-navbar-content{
+  width: 1170px;
+  margin: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 10;
+  font-size: 14px;
+}
+
+.custom-nav-menu-list{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+}
+
+.custom-hamburger{
+  display: none;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.custom-nav-logo{
+  color: rgb(244,215,26);
+  font-size: 1.2rem;
+}
+
+.custom-nav-menu{
+  height: 100%;
+  display: flex;
+  margin-top: 2px;
+  padding-left: 10px;
+}
+
+.nav-right{
+  margin-left: auto;
+}
+
+.custom-nav-item{
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.custom-nav-item a:hover{
+  color: #fff
+}
+
+ul{
+  list-style-type: none;
+}
+
+.custom-navbar a{
+  text-decoration: none;
+}
+
+.custom-nav-item a{
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  padding-top: 12px;
+}
+
+.custom-navbar p,.custom-navbar a {
+  color: #fff9
+}
+
+/* Footer CSS */
+
+.footer{
+  position: relative;
+  clear: both;
+  width: 100%;
+  height: 150px;
+}
+
+.footer-logo{
+  color: rgb(244,215,26);
+  font-size: 20px;
+  
+}
+
+.footer-content{
+  width: 75%;
+  margin: auto;
+  color: #000;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer-credits{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.footer-content p{
+  margin-bottom: 0;
+ }
+ 
+ /* Details CSS */
+
+.details-info > div {
+  height: 2%;
+}
+
+dl > div{
+  display: flex;
+  font-size: 14px;
+}
+
+dd{
+  width: 160px;
+  text-align: right;
+  font-weight: 550;
+}
+
+dt{
+  margin-left: 20px;
+  font-weight: 500 !important;
+}
+
+
+.title-section{
+  background-color: rgb(238,238,238);
+  padding: 20px;
+}
+
+.content-details-info{
+  font-size: 14px;
+}
+
+
+
+ /* Form CSS */
+
+ .form-container{
+  width: 500px;
+  padding:30px;
+  margin: auto;
+}
+
+.form-container .row{
+  width: 100%;
+  align-content: center;
+  margin: 20px 0;
+}
+
+.form-container .row label{
+  width: 20%;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 35px;
+}
+
+
+.form-container .row input{
+  width: 70%;
+  font-size: 14px;
+}
+
+.row--custom input,.row--custom select{
+  width: 60% !important;
+  margin-left: 10px;
+}
+
+.form-row{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.form-row label{
+  width: 20%;
+  text-align: right;
+  padding-right: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.form-input{
+  width: 70%;
+  padding: 6px;
+  border-radius: 8px 8px;
+  border: 1px solid rgb(189, 188, 188);
+  font-size: 15px;
+  transition: 0.3s;
+  color:rgb(63, 63, 63)
+}
+.form-input:focus{
+  outline: none;
+  box-shadow: 0px 0px 8px 2px rgba(98, 161, 202, 0.76);
+  border: 1px solid rgb(34, 166, 218);
+}
+
+
+/*
+.register-label{
+  font-size: 15px;
+  padding-right: 20px !important;
+}
+
+.row--custom.row{
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.row--custom.row input{
+  padding: 4px 12px 4px 12px;
+}
+ 
+.row--custom label{
+  width: 30% !important;
+  text-align: right !important;
+  font-size: 14px !important;
+}*/
+
+.registrationSelectBox{
+  height: 200px; 
+  width: 60% !important;
+  margin-left: 10px; 
+  overflow-y: scroll;
+  border-radius: 8px 8px;
+  border: 1px solid rgb(222,222,222) ;
+}
+
+.list-group{
+  margin-top: 5px;
+}
+
+.list-group .list-group-item{
+  border: none;
+  font-weight: 500;
+  padding: 2px;
+  border-radius: 0px !important;
+  cursor: pointer;
+}
+
+.selected-list-item{
+  background-color: rgb(0,120,215) !important;
+  color:#fff !important;
+} 
+
+/* My Points CSS */
+
+.points-block{
+  border: solid 1px #a1df99;
+  height: 35px;
+  width: 30px;
+  border-radius: 0 25% 0 0 ;
+  margin-left: 10px;
+}
+
+.points-block .points-label{
+  font-size: 18px;
+  padding-top: 2px;
+}
+
+.points-block.presence-block:hover{
+  border: solid 1px black;
+}
+
+.point-container{
+  display: flex;
+  margin-left: 6px;
+}
+
+.points-list{
+  display: flex;
+  overflow-y: hidden;
+  padding-left: 10px;
+}
+
+.progress-bar-container{
+  border: 1px solid #a1df99 !important;
+  background-color: #fff !important;
+  border-radius: 15px 15px;
+  overflow: hidden;
+  color: #fff;
+  height: 15px;
+  margin-top: 10px;
+}
+
+.points-list .progress-bar-container{
+  width: 80px;
+  background-color: #e2e2e2;
+}
+
+.progress-bar.bg-success{
+  font-size: 9px !important;
+}
+
+.points-list-tag{
+  display: flex;
+  overflow-y: hidden;
+  padding-left: 15px;
+}
+
+.points-list-tag a{
+  margin-left: 25px;
+  font-size: 17px;
+  color: #2d8321;
+  font-weight: 600;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.points-list-tag a:hover{
+  text-decoration: underline;
+  color: #2d8321;
+}
+
+.points-list-tag span{
+  margin-top: 2px;
+  font-size: 15px;
+}
+
+.points-list-tag a span{
+  font-size: 11px;
+  font-weight: 500;
+  margin-left: 3px;
+}
+
+.card-body{
+  padding: 0 !important;
+  padding-bottom: 15px !important;
+}
+
+ /* utilities */
+
+ .button-container{
+  padding-top: 30px;
+}
+
+.button-container button:nth-child(n+2){
+  margin-left: 10px !important;
+}
+
+.container-custom{
+  margin-top: 20px !important;
+  width: 70%;
+  margin: auto;
+}
+
+.custom-button{
+  background-color: #4fb34cf6;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  padding: 7px;
+  width: 40%;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  margin: auto;
+  transition: 0.1s ease;
+  border: #50b34cd2 solid 0.5px;
+}
+
+.custom-blue-button{
+  background-color: rgb(51,122,183);
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  padding: 7px;
+  width: 40%;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  margin: auto;
+  transition: 0.1s ease;
+  border: rgb(54, 121, 180) solid 0.5px;
+}
+
+.disabled-button{
+  background-color: #9b9b9b;
+  pointer-events: none;
+}
+
+.disabled-button:hover{
+  background-color: #9b9b9b !important;
+  pointer-events: none;
+}
+
+.custom-blue-button:hover{
+  background-color: rgb(41, 96, 145);
+}
+
+.custom-button:hover{
+  background-color: #2d8321;
+}
+
+.h1--custom{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.h2--custom{
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 6px dotted rgb(179, 179, 179,0.3);
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.h3--custom{
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 10px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+.h4--custom{
+  font-size: 15px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.h4--custom span{
+  color:rgb(189, 186, 186);
+}
+
+.hr--custom{
+  color: rgb(167, 166, 166);
+}
+
+.a--custom{
+  text-decoration: none;
+  color: green;
+}
+
+.a--custom-2{
+  text-decoration: none;
+  color: black;
+}
+
+.a--custom-2:hover{
+  text-decoration: underline;
+  color: green;
+}
+
+.a--custom:hover{
+  text-decoration: underline;
+  color: green;
+}
+
+.background--red{
+  background-color: red !important;
+}
+.background--green{
+  background-color: #a1df99;
+}
+.background--orange{
+  background-color: orange;
+}
+
+.myicon{
+  cursor: pointer;
+}

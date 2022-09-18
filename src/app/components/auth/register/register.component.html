@@ -1,0 +1,79 @@
+<div class="container-custom">
+    <div class="form-container-register">
+        <h2>Rejestracja</h2>
+        <p>Utwórz nowe konto.</p>
+        <hr />
+
+        <form (ngSubmit)="submit()">
+        <div class="form-row"> 
+            <label>Email</label>
+            <input [(ngModel)]="formData.email" class="form-input" id="email" name="email" type="email" required/>
+        </div>
+        <div class="form-row"> 
+            <label>Imię</label>
+            <input [(ngModel)]="formData.name" class="form-input" id="name" name="name" type="text" required/>
+        </div>
+        <div class="form-row"> 
+            <label>Nazwisko</label>
+            <input [(ngModel)]="formData.surname" class="form-input" id="surname" name="surname" type="text" required/>
+        </div>
+        <div class="form-row"> 
+            <label>Hasło</label>
+            <input [(ngModel)]="formData.password" class="form-input" id="password" name="password" type="password" required/>
+        </div>  
+        <div class="form-row"> 
+            <label>Potwierdź hasło</label>
+            <input [(ngModel)]="formData.confirmPassword" class="form-input" id="confirmPassword" name="confirmPassword" type="password" required/>
+        </div>
+        
+        <div class="row--custom">
+            <label>Typ studiów</label>
+            <select
+            name="studiesType"
+            class="mb-2 mr-sm-2 mb-sm-0 form-select"
+            [(ngModel)]="formData.studiesType" 
+            >
+                <option value="0">Stacjonarne</option>
+                <option value="1">Zaoczne</option>
+            </select>
+        </div> 
+        
+        <div class="row--custom">
+            <label>Stopień studiów</label>
+            <select
+            name="studiesLvl"
+            class="mb-2 mr-sm-2 mb-sm-0 form-select"
+            [(ngModel)]="formData.studiesLvl" 
+            (ngModelChange)="onChange($event)" 
+            >
+                <option value="0">Inżynierskie</option>
+                <option value="1">Magisterskie</option>
+            </select>
+        </div>
+        
+        <div class="row--custom">
+            <label>Semestr</label>
+            <select
+            name="semestr"
+            class="mb-2 mr-sm-2 mb-sm-0 form-select" 
+            [(ngModel)]="formData.semestr"
+            >
+                <option *ngFor="let number of semestrNumbers" value="{{number}}">{{number}}</option>
+            </select>
+        </div> 
+
+        <div class="row--custom">
+            <label>Kierunek studiów</label>
+            <select name="fieldOfStudy" multiple size="2" [(ngModel)]="formData.fieldOfStudy">
+                <option value="1">Informatyka</option>
+                <option value="2">Matematyka</option>
+            </select>
+        </div>
+
+        <div class="text-center" style="margin-top: 25px">
+        <button class="custom-button" type="submit">Zarejestruj</button>
+        </div>
+        </form>
+
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container-custom">
+    <div class="form-container">
+        <h2 class="header-title">Zaloguj się.</h2>
+        <hr class='hr--custom'/>
+        <form (ngSubmit)="submit()">
+            <div class="form-row">
+                <label>Email</label>
+                <input [(ngModel)]="formData.email" class="form-input" type="email" name="email" id="email" required />
+            </div>
+            <div class="form-row">
+                <label>Hasło</label>
+                <input [(ngModel)]="formData.password" class="form-input" type="password" name="password" id="password" required />
+            </div>
+            <br />
+            <div class="text-center">
+            <button class="custom-button" type="submit">Zaloguj</button>
+            </div>
+            <div>
+                <span>Nie pamiętasz jeszcze hasla?</span> <a routerLink="/" class="a--custom">Przypomnij</a>
+                <br/>
+                <span >Nie masz jeszcze konta?</span> <a routerLink="/" class="a--custom">Zarejestruj</a>
+            </div>    
+        </form>
+    </div>
+
+</div>
