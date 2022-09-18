@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
       confirmPassword: '',
       studiesType: '0',
       studiesLvl: '0',
-      semestr: '1',
+      semester: '1',
       fieldOfStudy: '1'
   } as FormRegister;
 
@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
 
   onChange(studiesLvl: string){
     studiesLvl === '1' ? this.semestrNumbers = [1,2,3] : this.semestrNumbers = [1,2,3,4,5,6,7];
-    this.formData.semestr = '1';
+    this.formData.semester = '1';
   }
 
   submit(){

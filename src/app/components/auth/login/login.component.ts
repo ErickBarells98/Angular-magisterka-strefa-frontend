@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormLogin } from 'src/app/interfaces/FormLogin';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,7 @@ import { FormLogin } from 'src/app/interfaces/FormLogin';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userSerivce: UserService,private router: Router) { }
 
   formData: FormLogin = {} as FormLogin;
 
@@ -16,7 +18,7 @@ export class LoginComponent implements OnInit {
   }
 
   submit(){
-    console.log(this.formData);
+    this.userSerivce.login(this.formData);
   }
 
 }

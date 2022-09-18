@@ -6,6 +6,6 @@ export interface FormRegister{
     confirmPassword: string,
     studiesType: string,
     studiesLvl: string,
-    semestr: string,
+    semester: string,
     fieldOfStudy: string
 }
