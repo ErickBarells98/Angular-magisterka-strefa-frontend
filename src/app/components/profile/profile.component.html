@@ -1,0 +1,32 @@
+<div class="profile-tab">
+    <div class="container-custom">
+        <h1 class="h1--custom">Mój profil:</h1>
+        <hr class='hr--custom'/>
+            <dl class="details-info" *ngIf="userProfile">
+                <div>
+                    <dd>ID</dd>
+                    <dt>{{userProfile.id}}</dt>
+                </div>
+                <div>
+                    <dd>Email</dd>
+                    <dt>{{userProfile.email}}</dt>
+                </div>
+                <div>
+                    <dd>Data rejestracji</dd>
+                    <dt>{{userProfile.registrationDate}}</dt>
+                </div>
+                <div>
+                    <dd>Imię</dd>
+                    <dt>{{userProfile.firstName}}</dt>
+                </div>
+                <div>
+                    <dd>Nazwisko</dd>
+                    <dt>{{userProfile.surname}}</dt>
+                </div>
+            </dl>
+        <hr class='hr--custom'/>
+        <h1 class="h1--custom">Kierunek studiów:</h1>
+
+        <button class="custom-button">Zarządzaj</button>
+    </div>
+</div>

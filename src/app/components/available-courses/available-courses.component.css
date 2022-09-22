@@ -1,0 +1,10 @@
+.container-custom{
+    margin-top: 20px;
+}
+.nav-tabs li a{
+    font-size: 14px;
+    color: black !important;
+}
+.nav-tabs li a.active{
+    color: white !important;
+}

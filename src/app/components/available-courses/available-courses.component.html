@@ -1,0 +1,23 @@
+<div class="container-custom">
+    <h1 class="h1--custom">Kursy</h1>
+    <div class='courses-tabs'>
+            <div class="tabs nav-tabs--custom coursesTab">
+            <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav nav-tabs">
+                <li [ngbNavItem]="1">
+                <a ngbNavLink>Mój semestr</a>
+                <ng-template ngbNavContent>
+                    <p>List</p>
+                </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                <a ngbNavLink>Pozostałe</a>
+                <ng-template ngbNavContent>
+                    <p>List</p>
+                </ng-template>
+                </li>
+            </ul>
+
+            <div [ngbNavOutlet]="nav" class="mt-2"></div>
+            </div>
+    </div>
+</div>

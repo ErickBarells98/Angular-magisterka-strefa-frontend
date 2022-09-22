@@ -6,19 +6,40 @@
     
         <div class="custom-nav-menu-list">
             <ul class="custom-nav-menu">
+
+                    <li class="custom-nav-item"  *ngIf="userServiceData.isLogged">
+                        <a routerLink="/">Moje kursy</a>
+                    </li>
+                    <li class="custom-nav-item"  *ngIf="userServiceData.isLogged">
+                        <a routerLink="/course">Dostępne kursy</a>
+                    </li>
+
                 <li class="custom-nav-item">
                     <a routerLink="/contact">Kontakt</a>
                 </li>
             </ul>
 
-            <ul class="custom-nav-menu nav-right">
+
+            <ng-container *ngIf="userServiceData.isLogged">
+                <ul class="custom-nav-menu nav-right">
+                    <li class="custom-nav-item">
+                        <a routerLink="/profile">Witaj {{userServiceData.userState.username}}!</a>
+                    </li>
+                    <li class="custom-nav-item">
+                        <a routerLink="" (click)="signOut()" > Wyloguj</a>
+                    </li>
+                </ul>
+            </ng-container>
+            <ng-container *ngIf="!userServiceData.isLogged">
+                <ul class="custom-nav-menu nav-right">
                     <li class="custom-nav-item">
                         <a routerLink="/register">Zarejestruj</a>
                     </li>
                     <li class="custom-nav-item">
                         <a routerLink="/login">Zaloguj</a>
                     </li>
-            </ul>
+                </ul>
+            </ng-container>
         </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
 <div class="main-content">
-  <router-outlet></router-outlet>
+  <router-outlet *ngIf="!userServiceData.initialLoadData && !userServiceData.loading"></router-outlet>
 </div>
 <app-footer></app-footer>
