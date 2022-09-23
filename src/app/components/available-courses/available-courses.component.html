@@ -6,13 +6,13 @@
                 <li [ngbNavItem]="1">
                 <a ngbNavLink>Mój semestr</a>
                 <ng-template ngbNavContent>
-                    <p>List</p>
+                    <app-courses-list [courses]="availableCoursesServiceData.mySemestrCourses" [isLoaded]="availableCoursesServiceData.mySemestrLoaded"></app-courses-list>
                 </ng-template>
                 </li>
                 <li [ngbNavItem]="2">
                 <a ngbNavLink>Pozostałe</a>
                 <ng-template ngbNavContent>
-                    <p>List</p>
+                    <app-courses-list [courses]="availableCoursesServiceData.restCourses" [isLoaded]="availableCoursesServiceData.restCourseLoaded"></app-courses-list>
                 </ng-template>
                 </li>
             </ul>

@@ -10,6 +10,8 @@ import { AuthModule } from './components/auth/auth.module';
 import { JwtInterceptor } from './utils/interceptors/jwt.interceptor';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AvailableCoursesModule } from './components/available-courses/available-courses.module';
+import { CourseModule } from './components/course/course.module';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { AvailableCoursesModule } from './components/available-courses/available
     AppRoutingModule,
     HttpClientModule,
     AuthModule,
-    AvailableCoursesModule
+    AvailableCoursesModule,
+    CourseModule
   ],
   bootstrap: [AppComponent]
 })

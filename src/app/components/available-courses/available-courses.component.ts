@@ -10,6 +10,8 @@ export class AvailableCoursesComponent implements OnInit {
 
   constructor(private availableCoursesService: AvailableCoursesService) { }
 
+  availableCoursesServiceData = this.availableCoursesService;
+  
   active = 1;
 
   ngOnInit(): void {

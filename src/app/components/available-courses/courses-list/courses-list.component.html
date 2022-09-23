@@ -1,0 +1,10 @@
+<ng-container *ngIf="courses.CourseDTOs !== undefined && isLoaded; else elseBlock">
+    <app-course-item [coursesForSemestr]="courses.CourseDTOs[1]" *ngIf="courses.CourseDTOs[1] !== undefined && courses.CourseDTOs[1].length !== 0"></app-course-item>
+    <app-course-item [coursesForSemestr]="courses.CourseDTOs[2]" *ngIf="courses.CourseDTOs[2] !== undefined && courses.CourseDTOs[2].length !== 0"></app-course-item>
+    <app-course-item [coursesForSemestr]="courses.CourseDTOs[3]" *ngIf="courses.CourseDTOs[3] !== undefined && courses.CourseDTOs[3].length !== 0"></app-course-item>
+    <app-course-item [coursesForSemestr]="courses.CourseDTOs[4]" *ngIf="courses.CourseDTOs[4] !== undefined && courses.CourseDTOs[4].length !== 0"></app-course-item>
+    <app-course-item [coursesForSemestr]="courses.CourseDTOs[5]" *ngIf="courses.CourseDTOs[5] !== undefined && courses.CourseDTOs[5].length !== 0"></app-course-item>
+    <app-course-item [coursesForSemestr]="courses.CourseDTOs[6]" *ngIf="courses.CourseDTOs[6] !== undefined && courses.CourseDTOs[6].length !== 0"></app-course-item>
+    <app-course-item [coursesForSemestr]="courses.CourseDTOs[7]" *ngIf="courses.CourseDTOs[7] !== undefined && courses.CourseDTOs[7].length !== 0"></app-course-item>
+</ng-container>
+<ng-template #elseBlock>Nie ma dostępnych kursów.</ng-template>

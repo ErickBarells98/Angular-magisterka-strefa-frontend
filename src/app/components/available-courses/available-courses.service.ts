@@ -9,6 +9,9 @@ export class AvailableCoursesService {
   mySemestrCourses: Array<any> = [];
   restCourses: Array<any> = [];
 
+  mySemestrLoaded: boolean = false;
+  restCourseLoaded: boolean = false;
+
   fetchCourses(){
     this.http.get<any>('api/Course/getCourses?semestr='+true)
     .subscribe({
@@ -19,7 +22,7 @@ export class AvailableCoursesService {
         console.log(error);
       },
       complete: () => {
-
+        this.mySemestrLoaded = true;
       }
     })
 
@@ -32,7 +35,7 @@ export class AvailableCoursesService {
         console.log(error);
       },
       complete: () => {
-        
+        this.restCourseLoaded = true;
       }
     })
   }

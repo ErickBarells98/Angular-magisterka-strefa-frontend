@@ -1,0 +1,12 @@
+<div style="margin-top: 15px">
+    <h2 class='h2--custom'>Semestr {{coursesForSemestr[0].SemesterNumber}}</h2>
+    <h3 class='h3--custom'>{{coursesForSemestr[0].StudiesLevel}}</h3>
+    <hr class='hr-list' />
+    <ul class='ul-custom-list'>
+        <ng-container *ngFor="let course of coursesForSemestr">
+            <li>
+                <a class="a--custom" [routerLink]="['/course', course.ID]">{{course.Name}} ( {{course.StudiesTYpe}} | {{course.FieldOfStudyName}} )</a>
+            </li>
+        </ng-container>
+    </ul>
+</div>

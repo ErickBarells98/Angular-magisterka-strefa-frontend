@@ -1,0 +1,30 @@
+export interface CourseDetails {
+    ID: number
+    Name: string
+    Description: string
+    CourseTypeId: number
+    CreationDate: string
+    Year: number
+    Avalible: boolean
+    EntryState: number
+    IsApplicant: boolean
+    IsParticipant: boolean
+    IsMaster: boolean
+    IsDeleted: boolean
+    Laboratories: any[]
+    Lectures: any[]
+    StudiesTypeId: number
+    AvalibleStudiesTypes: any
+    StudiesTYpe: string
+    StudiesLevelId: number
+    StudiesLevel: string
+    AvalibleStudiesLevels: any
+    CourseParticipantsCount: number
+    SemesterNumber: number
+    AvalibleStudiesSemesters: any
+    MaxPoints: number
+    HasProject: boolean
+    ProjectMaxPoints: number
+    Masters: any[]
+    DisplayYear: string
+  }

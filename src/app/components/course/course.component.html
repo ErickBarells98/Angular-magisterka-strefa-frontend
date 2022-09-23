@@ -1,0 +1,54 @@
+<div class='details-tab'>
+    <div class='title-section'>
+       <h1 class='h1--custom' *ngIf="courseServiceData.isLoaded">{{courseServiceData.courseDetailsData.Name}}</h1>
+    </div>
+    <div class='container-custom'>
+        <dl class="details-info" *ngIf="courseServiceData.isLoaded">
+            <div>
+                <dd>Name</dd>
+                <dt>{{courseServiceData.courseDetailsData.Name}}</dt>
+            </div>
+            <div>
+                <dd>Rok akademicki</dd>
+                <dt>{{courseServiceData.courseDetailsData.DisplayYear}}</dt>
+            </div>
+            <div>
+                <dd>Typ studiów</dd>
+                <dt>{{courseServiceData.courseDetailsData.StudiesTYpe}}</dt>
+            </div>
+            <div>
+                <dd>Stopień studiów</dd>
+                <dt>{{courseServiceData.courseDetailsData.StudiesLevel}}</dt>
+            </div>
+            <div>
+                <dd>Semestr</dd>
+                <dt>{{courseServiceData.courseDetailsData.SemesterNumber}}</dt>
+            </div>
+            <div>
+                <dd>Max punktów</dd>
+                <dt>{{courseServiceData.courseDetailsData.MaxPoints}}</dt>
+            </div>
+            <div>
+                <dd>Opis</dd>
+                <dt>{{courseServiceData.courseDetailsData.Description}}</dt>
+            </div>
+            <div>
+                <dd>Prowadzący</dd>
+                <dt>{{courseServiceData.courseDetailsData.Masters[0].Name}} {{courseServiceData.courseDetailsData.Masters[0].Surname}}</dt>
+            </div>
+        </dl>
+
+        <div class='content-container' *ngIf="requestJoin === 'approved'"> 
+            Zaakceptowany tutaj LABY!
+        </div>
+    </div>
+
+    <div class='button-container' *ngIf="courseServiceData.isLoaded">
+        <button class="custom-blue-button" (click)="goBack()">Wróc do listy kursów</button>
+
+        <button class="custom-button" (click)="joinCourse()" [ngClass]="{'disabled-button': requestJoin === 'sent'}" *ngIf="requestJoin !== 'approved' && requestJoin !== 'not set'">
+            <span *ngIf="requestJoin === 'not sent'; else elseBlock">Dołącz do kursu</span>
+            <ng-template #elseBlock><span>Wysłano prośbę.</span></ng-template>
+        </button> 
+    </div>
+</div>

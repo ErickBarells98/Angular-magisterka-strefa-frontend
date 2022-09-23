@@ -42,19 +42,18 @@ export class JwtInterceptor implements HttpInterceptor {
           if(errordata.status === 401){
               return this.handle401Error(request,next);
           }
-          return throwError(errordata);
+          return throwError(() => errordata);
       })
     )
   }
 
-  //PRZETESTOWAĆ
   private handle401Error(request: HttpRequest<any>, next: HttpHandler){
       if(!this.isRefreshing){
         this.isRefreshing = true;
         
         if(this.userService.isLogged){
           return this.userService.refreshToken().pipe(
-            //SWITCHMAP EXP.. nie jestem zainteresowany poprzednia odpowiedzia i przeczhodze na nowy strumien observable
+            //SWITCHMAP EXP.. nie jestem zainteresowany poprzednia odpowiedzia i przechodze na nowy strumien observable
             switchMap(() => {
               this.isRefreshing = false;
               return next.handle(request);
