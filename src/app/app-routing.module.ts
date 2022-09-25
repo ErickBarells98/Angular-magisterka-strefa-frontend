@@ -6,6 +6,8 @@ import { AvailableCoursesComponent } from './components/available-courses/availa
 import { ContactComponent } from './components/contact/contact.component';
 import { CourseComponent } from './components/course/course.component';
 import { HomeComponent } from './components/home/home.component';
+import { LaboratoriesDetailsComponent } from './components/laboratories/laboratories-details/laboratories-details.component';
+import { LectureDetailsComponent } from './components/lectures/lecture-details/lecture-details.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
@@ -15,7 +17,9 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'course', component: AvailableCoursesComponent},
-  {path: 'course/:id', component: CourseComponent}
+  {path: 'course/:id', component: CourseComponent},
+  {path: 'course/laboratories/:id', component: LaboratoriesDetailsComponent},
+  {path: 'course/lectures/:id', component: LectureDetailsComponent}
 ];
 
 @NgModule({

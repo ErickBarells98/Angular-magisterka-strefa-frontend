@@ -25,6 +25,7 @@ export class JwtInterceptor implements HttpInterceptor {
         const apiReq = request.clone({url: `https://localhost:44363/${request.url}`});
         return next.handle(apiReq);
     }
+    
 
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.userService.userState.jwt}`,
@@ -40,7 +41,7 @@ export class JwtInterceptor implements HttpInterceptor {
     return next.handle(authApiReq).pipe(
       catchError(errordata => {
           if(errordata.status === 401){
-              return this.handle401Error(request,next);
+              return this.handle401Error(authApiReq,next);
           }
           return throwError(() => errordata);
       })
@@ -54,9 +55,19 @@ export class JwtInterceptor implements HttpInterceptor {
         if(this.userService.isLogged){
           return this.userService.refreshToken().pipe(
             //SWITCHMAP EXP.. nie jestem zainteresowany poprzednia odpowiedzia i przechodze na nowy strumien observable
-            switchMap(() => {
+            switchMap((res: any) => {
+              this.userService.setJwt(res.jwt);
+
+              const headers = new HttpHeaders({
+                'Authorization': `Bearer ${res.jwt}`,
+              });
+
+              const newJwtReq = request.clone({
+                headers: headers
+              });
+              
               this.isRefreshing = false;
-              return next.handle(request);
+              return next.handle(newJwtReq);
             }),
             catchError((error) => {
               this.isRefreshing = false;

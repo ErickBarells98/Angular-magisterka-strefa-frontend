@@ -1,0 +1,16 @@
+<ul class="content-list" *ngIf="lectures.length !== 0" style="margin-top: 15px; padding-left: 32px;">
+    <li class="conten-element" *ngFor="let lec of lectures">
+        <h4 class='h4--custom'><span>{{lec.Number}} </span>  <a routerLink="/" class="a--custom">{{lec.Name}}</a></h4>
+        <div class='file-display-container'>
+          <ul>
+          Pliki do pobrania: &#123;
+            <div *ngIf="lec.LectureFiles.length !== 0">
+                <li *ngFor="let file of lec.LectureFiles"  class="file-display-row">
+                  {{file.FileName}}  <fa-icon [icon]="faCircleDown" style="color:green; cursor: pointer; font-size: 13px;" (click)="handleDownload(file.ID,file.FileName,'1')" ></fa-icon>
+                </li>
+            </div>
+          &#125;
+          </ul>
+        </div>
+    </li>
+</ul>

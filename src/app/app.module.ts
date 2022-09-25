@@ -11,7 +11,7 @@ import { JwtInterceptor } from './utils/interceptors/jwt.interceptor';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AvailableCoursesModule } from './components/available-courses/available-courses.module';
 import { CourseModule } from './components/course/course.module';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import { CourseModule } from './components/course/course.module';
     HttpClientModule,
     AuthModule,
     AvailableCoursesModule,
-    CourseModule
+    CourseModule,
+    FontAwesomeModule
   ],
   bootstrap: [AppComponent]
 })

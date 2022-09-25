@@ -71,7 +71,7 @@ export class UserService {
     this.http.post<any>('api/auth/register',bodyRegisterData,{ context: new HttpContext().set(BYPASS_LOG, true), headers })
     .pipe(
       finalize(() => {
-        //done
+ 
       })
     )
     .subscribe({
@@ -104,6 +104,10 @@ export class UserService {
           localStorage.setItem("userLogged","true");
         },
         error: error => {
+          if(error.status === 401){
+            //fix issue with logging in. Check net for solutions.
+            this.router.navigate(['login'])
+          }
           console.log(error);
         },
         complete: () => {
@@ -143,6 +147,10 @@ export class UserService {
 
   refreshToken(){
     return this.http.post('api/auth/refresh',{});
+  }
+
+  setJwt(jwt: string){
+    this.userState.jwt = jwt;
   }
 
 }

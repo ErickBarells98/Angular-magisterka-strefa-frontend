@@ -12,6 +12,8 @@ import { Location } from '@angular/common';
 export class CourseComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
 
+  active = 1;
+
   requestJoin: string = 'not set';
 
   constructor(private courseService: CourseService, private route: ActivatedRoute, private location: Location) {

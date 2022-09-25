@@ -39,7 +39,22 @@
         </dl>
 
         <div class='content-container' *ngIf="requestJoin === 'approved'"> 
-            Zaakceptowany tutaj LABY!
+            <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav nav-tabs">
+                <li [ngbNavItem]="1">
+                <a ngbNavLink>Laboratoria</a>
+                <ng-template ngbNavContent>
+                   <app-laboratories [laboratories]="courseServiceData.courseDetailsData.Laboratories"></app-laboratories>
+                </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                <a ngbNavLink>Wykłady</a>
+                <ng-template ngbNavContent>
+                    <app-lectures [lectures]="courseServiceData.courseDetailsData.Lectures"></app-lectures>
+                </ng-template>
+                </li>
+            </ul>
+
+            <div [ngbNavOutlet]="nav" class="mt-2"></div>
         </div>
     </div>
 
